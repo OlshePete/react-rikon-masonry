@@ -1,0 +1,96 @@
+// masonry styles
+
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  columns: var(--columns);
+  gap: var(--gap);
+
+  > * {
+    break-inside: avoid;
+    margin-bottom: var(--gap);
+  }
+
+  @supports (grid-template-rows: masonry) {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: masonry;
+    grid-auto-flow: dense;
+
+    > * {
+      margin-bottom: 0em;
+    }
+  }
+}
+
+.featured {
+  grid-column: span 2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 3rem 0;
+  text-align: center;
+  font-size: clamp(2rem, 1rem + 3vw, 6rem);
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.2;
+}
+
+span.createdAt {
+  display: block;
+  width: 100%;
+  text-align: end;
+  color: grey;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, var(--spacer));
+  word-wrap: break-word
+}
+
+body {
+  font-family: var(--ff-primary);
+  min-height: 100vh;
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--clr-body);
+  background: var(--clr-bg);
+  padding-bottom: 13rem;
+}
+
+a {
+  color: var(--clr-primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+.content {
+  padding: 2em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .title {
+    font-weight: 900;
+    color: var(--clr-primary);
+    line-height: 0.8;
+  }
+}

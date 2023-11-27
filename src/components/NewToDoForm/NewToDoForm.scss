@@ -1,0 +1,69 @@
+
+.newToDoForm {
+  margin: 20px auto;
+  padding: 2rem;
+  width: min(100%, 800px);
+  label,div>label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  div.content-container {
+    position: relative;
+  }
+  input,
+  label>div#content {
+    background-color: white;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  label>div#content {
+    height: 8em; // Высота в 4 строки
+    overflow-y: auto;
+  }
+
+  button {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+    border: 1px solid var(MasonryItemProps);
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color:  var(--clr-bg);
+      color: var(--clr-primary);
+    }
+  }
+  
+   button.reset-selection {
+    background-color: rgba(0,0,0,0);
+    border:none;
+    color:black;
+    position: absolute;
+    opacity: 0.6;
+    top: -8px;
+    right: 0;
+    &:hover {
+      opacity: .9;
+      text-decoration: underline;
+    }
+   }
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    justify-content: center;
+    align-items: center;
+    span {
+      text-align: center;
+      opacity:0.6
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$font-size: 14px;
+$font-color: lch(28 99 35);
+
+$spacer: 1rem;
+
+:root {
+  --ff-primary: basic-sans, sans-serif;
+  --clr-primary: #175ef7;
+  --clr-body: #333;
+  --clr-bg: #ddd;
+  --spacer: #{$spacer};
+  --flow-space: #{$spacer};
+  --columns:3;
+  --gap: 1em;
+}
+html {
+  font-size: $font-size;
+  color: $font-color;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.close-btn {
+  font-size: 42px;
+  font-weight: bold;
+  color: #000;
+}

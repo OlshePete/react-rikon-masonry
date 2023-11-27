@@ -1,0 +1,17 @@
+# Build
+dist
+docs/dist
+.env
+
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+bower_components
+
+# Other
+.DS_Store
+.env
+package-lock.json
