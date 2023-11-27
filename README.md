@@ -132,40 +132,6 @@ interface RawHTMLProps {
 }
 ```
 
-## Пример верстки
-
-```jsx
-<div class="wrapper">
-  <form class="newToDoForm">
-    <label>
-      заголовок
-      <input type="text" name="title" required="" value="" />
-    </label>
-    <br />
-    <div class="content-container">
-      <label>
-        содержание<div contenteditable="true" id="content"></div>
-      </label>
-    </div>
-    <br />
-    <div class="form-actions">
-      <span>выделить часть содержания, для жирного начертания</span>
-      <button type="submit">сохранить запись</button>
-    </div>
-  </form>
-  <div class="container">
-    <div class="content flow">
-      <span class="close-btn close" tabindex="1">
-        ×
-      </span>
-      <h1 class="title">Заметка 1</h1>
-      <div>Содержание заметки 1</div>
-      <span class="createdAt">27 окт. 2023 г., 14:34:00</span>
-    </div>
-  </div>
-</div>
-```
-
 ## Вспомогательные функции
 
 - `calculateFormattedDateNow` - функция возвращает текущую дату и время в формате «27 окт. 2023 г., 14:34:00»
